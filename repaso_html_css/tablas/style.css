@@ -1,0 +1,49 @@
+body {
+    font-family: sans-serif;
+    color: #333;
+}
+
+h2 {
+    font-family: serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+hr {
+    margin: 40px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.tabla-basica {
+    border-collapse: collapse;
+}
+.tabla-basica th, .tabla-basica td{
+    border: 1px solid #999;
+    padding: 5px 10px;
+    text-align: left;
+}
+.tabla-basica thead th{
+    font-weight: normal;
+    text-align: center;
+}
+
+.tabla-compleja th, .tabla-compleja td {
+    border: 1px solid #666;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-compleja thead th {
+    background-color: #f2f2f2;
+}
+
+.tabla-compleja tbody th {
+    font-weight: bold;
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.tabla-compleja tbody td {
+    text-align: left;
+}
