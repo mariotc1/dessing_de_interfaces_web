@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.tabla-cambio {
+    border-collapse: collapse;
+    border: 1px solid #999;
+    width: auto; 
+}
+
+.tabla-cambio th, .tabla-cambio td {
+    border: 1px solid #999;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.tabla-cambio thead th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}
+
+.tabla-cambio tbody td {
+    background-color: #fef9e2;
+}
+
+.tabla-cambio .celda-cambio {
+    background-color: #eaf3f9;
+    text-align: left;
+}
+
+.celda-cambio img {
+    vertical-align: middle;
+    margin-right: 8px;
+}

@@ -1,0 +1,16 @@
+body {
+    font-family: sans-serif;
+}
+
+.lista-cuadrada {
+    list-style-type: square;
+}
+
+.lista-icono {
+    list-style-image: url('person.png');
+}
+
+.lista-anidada >li > ul {
+    list-style-type: circle;
+    color: red;
+}
