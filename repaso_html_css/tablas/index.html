@@ -8,7 +8,6 @@
 </head>
 <body>
 
-    <!-- Sección de Música -->
     <section>
         <h2>Música</h2>
         <table class="tabla-basica">
@@ -45,7 +44,6 @@
 
     <hr>
 
-    <!-- Sección de Programación con COLSPAN -->
     <section>
         <h2>Programación</h2>
         <table class="tabla-basica">
@@ -77,7 +75,6 @@
 
     <hr>
 
-    <!-- Sección de Frutas con ROWSPAN -->
     <section>
         <h2>Frutas</h2>
         <table class="tabla-basica">
@@ -93,7 +90,7 @@
                 </tr>
                 <tr>
                     <td>lychees</td>
-                    <td></td> <!-- Celda vacía para mantener la estructura -->
+                    <td></td>
                 </tr>
             </tbody>
         </table>
@@ -101,29 +98,23 @@
 
     <hr>
 
-    <!-- Sección de Horario con COLSPAN y ROWSPAN -->
     <section>
         <h2>Horario</h2>
         <table class="tabla-compleja">
             <caption>Your Content Here</caption>
             <thead>
                 <tr>
-                    <!-- Celda vacía que ocupa 2 filas y 1 columna -->
                     <th rowspan="2"></th> 
-                    <!-- Celda que ocupa 1 fila y 2 columnas -->
                     <th colspan="2">A common header for two subheads</th>
-                    <!-- Celda que ocupa 2 filas y 1 columna -->
                     <th rowspan="2">Header 3</th>
                 </tr>
                 <tr>
-                    <!-- Estas celdas se colocan debajo del common header -->
                     <th>Header 1</th>
                     <th>Header 2</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <!-- th con scope="row" indica que es un encabezado de fila -->
                     <th scope="row">Thing A</th>
                     <td>data A1</td>
                     <td>data A2</td>

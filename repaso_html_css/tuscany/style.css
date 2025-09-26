@@ -1,0 +1,58 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+}
+
+body.homepage {
+    background-color: #FFFFE0;
+}
+
+.homepage .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.gallery-item {
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+.gallery-item img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+}
+
+.gallery-item h2 {
+    font-family: sans-serif;
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.photo-page-container {
+    text-align: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.photo-page-container h1 {
+    font-family: sans-serif;
+    font-weight: normal;
+}
+
+.photo-page-container img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #999;
+}
+
+.photo-page-container .back-link {
+    margin-top: 20px;
+}
+
+.back-link a {
+    color: blue;
+    text-decoration: none;
+}
