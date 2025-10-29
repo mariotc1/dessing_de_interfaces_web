@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="author" content="Tu Nombre Completo">
+        <meta name="creation-date" content="2025-10-29">
+        <title>Formulario Avanzado</title>
+    </head>
+
+    <body>
+
+        <form method="get" action="">
+
+            <!-- Primer grupo de campos -->
+            <fieldset>
+                <legend>Únete</legend>
+                <p>Nuestros socios tienen muchas ventajas. ¡Y es gratis!</p>
+
+                <label for="nombre_apellidos">Nombre y apellidos:</label>
+                <input type="text" id="nombre_apellidos" name="nombre_apellidos" autofocus required>
+                
+                <br><br>
+
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" placeholder="Escribe aquí tu comentario"></textarea>
+            </fieldset>
+            
+            <br>
+
+            <!-- Segundo grupo de campos -->
+            <fieldset>
+                <legend>Campos de entrada de texto especiales</legend>
+                
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required>
+                
+                <br><br>
+
+                <label for="buscar">Buscar [HTML5]:</label>
+                <input type="search" id="buscar" name="buscar">
+
+                <br><br>
+
+                <label for="email_usuario">Email [HTML5]:</label>
+                <input type="email" id="email_usuario" name="email_usuario">
+
+                <br><br>
+
+                <label for="telefono">Teléfono [HTML5]:</label>
+                <input type="tel" id="telefono" name="telefono">
+
+                <br><br>
+
+                <label for="url_web">URL [HTML5]:</label>
+                <input type="url" id="url_web" name="url_web">
+            </fieldset>
+
+            <br>
+            
+            <input type="submit" value="Enviar">
+        </form>
+
+    </body>
+</html>
