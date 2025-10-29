@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Tu Nombre Completo">
+        <meta name="creation-date" content="2025-10-29">
+        <title>Formulario con Datalist</title>
+    </head>
+    <body>
+
+        <form method="get" action="">
+            <fieldset>
+                <legend>Únete</legend>
+                <p>Nuestros socios tienen muchas ventajas. ¡Y es gratis!</p>
+                
+                <label for="nombre_apellidos">Nombre y apellidos:</label>
+                <input type="text" id="nombre_apellidos" name="nombre_apellidos">
+                
+                <br><br>
+
+                <label for="edad">Edad:</label>
+                <input type="text" id="edad" name="edad" list="lista_edades">
+                
+                <datalist id="lista_edades">
+                    <option value="Menor de 20">
+                    <option value="Entre 20 y 40">
+                    <option value="Entre 40 y 60">
+                    <option value="Entre 60 y 80">
+                    <option value="Mayor de 80">
+                </datalist>
+
+                <br><br>
+
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario"></textarea>
+                
+                <br><br>
+
+                <input type="submit" value="Enviar">
+            </fieldset>
+        </form>
+
+    </body>
+</html>
