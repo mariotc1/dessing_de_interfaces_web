@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Tu Nombre Completo">
+        <meta name="creation-date" content="2025-10-30">
+        <title>Formulario con Menús Desplegables</title>
+    </head>
+    <body>
+
+        <form method="get" action="">
+
+            <label for="color">Color:</label>
+            <select id="color" name="color">
+                <option value="rojo" selected>Rojo</option>
+                <option value="azul">Azul</option>
+                <option value="negro">Negro</option>
+                <optgroup label="Metalizados">
+                    <option value="plateado">Plateado</option>
+                    <option value="dorado">Dorado</option>
+                </optgroup>
+            </select>
+
+            <br><br>
+
+            <label for="caracteristicas">Características:</label>
+            <select id="caracteristicas" name="caracteristicas[]" multiple size="4">
+                <option value="cordones" selected>Con cordones</option>
+                <option value="logo_metalico">Logo metálico</option>
+                <option value="ligeras">Ligeras</option>
+                <option value="con_musica" selected>Con música</option>
+            </select>
+            
+            <br><br>
+            
+            <input type="submit" value="Enviar">
+            
+        </form>
+
+    </body>
+</html>
