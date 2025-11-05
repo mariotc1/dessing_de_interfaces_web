@@ -1,0 +1,93 @@
+:root {
+    --color-fondo: bisque;
+}
+
+@font-face {
+    font-family: 'Navidad';
+    src: url('MountainsofChristmas-Regular.ttf');
+}
+
+body {
+    color: brown;
+}
+
+h1 {
+    font-family: 'Navidad', fantasy;
+    font-size: 40px;
+    padding: 2em;
+}
+
+header {
+    background-color: var(--color-fondo);
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 1em;
+}
+
+#primero {
+    background-color: yellow;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+p:nth-last-of-type(odd) {
+    color: blue;
+}
+
+input[type="number"] {
+    margin-left: 4em;
+}
+
+a:hover {
+    color: green;
+}
+
+footer>p {
+    text-align: center;
+    background-color: var(--color-fondo);
+}
+
+#padre {
+    width: 200px;
+    height: 100px;
+    border: 2px dotted black;
+    background-color: lightblue;
+}
+
+#hijo {
+    margin-left: 1em;
+    margin-top: 1em;
+    width: 50%;
+    height: 50%;
+    padding: 1em;
+    border: 2px solid green;
+    background-color: var(--color-fondo);
+    box-sizing: content-box;
+}
+
+article{
+            text-align: center;
+        }
+
+img{
+    width: 200px;
+}
+
+#centrar{
+    width: 50%;
+    background-color: aqua;
+    margin:0 auto;
+}
