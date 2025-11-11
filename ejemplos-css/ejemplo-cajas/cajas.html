@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* ESTILOS PARA LA PRIMERA SECCIÓN */
+        section:nth-of-type(1) {
+            background-color: #f8f9fa;
+        }
+
+        section:nth-of-type(1) img {
+            float: right;
+            width: 25%;
+            max-width: 200px;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        section:nth-of-type(1) h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        section:nth-of-type(1) p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        section:nth-of-type(1) p:nth-of-type(2) {
+            clear: both;
+        }
+
+        /* ESTILOS PARA LA SEGUNDA SECCIÓN */
+        section:nth-of-type(2) {
+            background-color: #e8f4fd;
+            overflow: auto;
+        }
+
+        section:nth-of-type(2) h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section:nth-of-type(2) p {
+            float: left;
+            width: 22%;
+            margin-right: 4%;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-align: justify;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        section:nth-of-type(2) p:last-of-type {
+            margin-right: 0;
+        }
+
+        footer {
+            clear: both;
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: #34495e;
+            color: white;
+            border-radius: 5px;
+        }
+
+        #medalla {
+            width: 100px;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            z-index: 1;
+        }
+    </style>
+
+    <body>
+        <header>
+            <h1>Ejemplo cajas</h1>
+        </header>
+        <main>
+            <section>
+                <img src="images.jpeg" alt="Imagen de ejemplo">
+                <h2>Flotante a la derecha con una imagen</h2>
+                
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim alias nisi nam incidunt ducimus rerum adipisci iure sint aliquid. Vitae molestias, beatae tempore ea culpa ut iure neque deserunt ipsa!
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis non, modi dolore fugiat delectus blanditiis sint ea aliquid animi ex libero cum reiciendis consequuntur magni eaque nam laboriosam! Fuga, sint.
+                </p>
+            </section>
+
+            <section>
+                <h2>Esquema de columnas</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ad tempora doloremque? Amet placeat eos, non suscipit, sit commodi culpa maxime unde, voluptas doloribus rem autem vel veritatis accusamus. Dolores.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ad tempora doloremque? Amet placeat eos, non suscipit, sit commodi culpa maxime unde, voluptas doloribus rem autem vel veritatis accusamus. Dolores.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ad tempora doloremque? Amet placeat eos, non suscipit, sit commodi culpa maxime unde, voluptas doloribus rem autem vel veritatis accusamus. Dolores.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate ad tempora doloremque? Amet placeat eos, non suscipit, sit commodi culpa maxime unde, voluptas doloribus rem autem vel veritatis accusamus. Dolores.</p>
+            </section>
+            <footer>
+                <p>Pie de página</p>
+            </footer>
+            <img id="medalla" src="medalla.png" alt="Medalla">
+        </main>
+    </body>
+</html>
