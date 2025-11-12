@@ -1,0 +1,57 @@
+/* CENTRAR EL TABLERO EN LA PANTALLA */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* 1. EL CONTENEDOR PADRE */
+.tablero {
+    position: relative; /* límites para los hijos */
+    width: 400px; 
+    height: 400px;
+    background-color: #d3d3d3; 
+    border: 8px solid #a9a9a9; 
+    box-sizing: border-box; /* para que el borde no aumente el tamaño total */
+}
+
+/* 2. ESTILO PARA LAS FICHAS */
+.ficha {
+    position: absolute; /* movimiento libremente dentro del padre */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* convertir el cuadrado en círculo */
+    border: 6px solid #a9a9a9; /* anillo gris alrededor del color */
+}
+
+/* 3. POSICIONAMIENTO ESPECÍFICO Y COLOR PARA CADA UNO */
+
+/* Arriba Izquierda */
+.rojo {
+    background-color: red;
+    top: 20px;
+    left: 20px;
+}
+
+/* Arriba Derecha */
+.verde {
+    background-color: green;
+    top: 20px;
+    right: 20px;
+}
+
+/* Abajo Izquierda */
+.amarillo {
+    background-color: yellow;
+    bottom: 20px;
+    left: 20px;
+}
+
+/* Abajo Derecha */
+.azul {
+    background-color: blue;
+    bottom: 20px;
+    right: 20px;
+}
