@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablero de Parchís</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .tablero {
+            width: 600px;
+            height: 600px;
+            border: 4px solid #333;
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: repeat(15, 1fr);
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border-radius: 10px;
+        }
+
+        .casilla {
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Casas de los jugadores */
+        .casa-roja {
+            background-color: #e74c3c;
+        }
+
+        .casa-amarilla {
+            background-color: #f1c40f;
+        }
+
+        .casa-verde {
+            background-color: #27ae60;
+        }
+
+        .casa-azul {
+            background-color: #3498db;
+        }
+
+        /* Círculos en las casas */
+        .circulo {
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            border: 2px solid #333;
+        }
+
+        /* Camino del tablero */
+        .camino {
+            background-color: white;
+        }
+
+        .camino-rojo {
+            background-color: #ffebee;
+        }
+
+        .camino-amarillo {
+            background-color: #fffbf0;
+        }
+
+        .camino-verde {
+            background-color: #e8f5e8;
+        }
+
+        .camino-azul {
+            background-color: #e3f2fd;
+        }
+
+        /* Casillas especiales */
+        .salida {
+            background-color: #fff;
+            border: 3px solid;
+        }
+
+        .salida-roja {
+            border-color: #e74c3c;
+        }
+
+        .salida-amarilla {
+            border-color: #f1c40f;
+        }
+
+        .salida-verde {
+            border-color: #27ae60;
+        }
+
+        .salida-azul {
+            border-color: #3498db;
+        }
+
+        /* Casilla central */
+        .centro {
+            background: linear-gradient(45deg, #e74c3c 25%, #f1c40f 25%, #f1c40f 50%, #27ae60 50%, #27ae60 75%, #3498db 75%);
+            border: 3px solid #333;
+            font-weight: bold;
+            color: white;
+            text-shadow: 1px 1px 2px #333;
+        }
+
+        /* Casillas de llegada */
+        .llegada {
+            position: relative;
+        }
+
+        .llegada::after {
+            content: "★";
+            color: gold;
+            font-size: 16px;
+            position: absolute;
+        }
+
+        /* Números en las casillas */
+        .numero {
+            font-size: 10px;
+            color: #666;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 Tablero de Parchís 🎲</h1>
+        <div class="tablero" id="tablero">
+            <!-- El tablero se generará con JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        function crearTablero() {
+            const tablero = document.getElementById('tablero');
+            
+            // Crear 225 casillas (15x15)
+            for (let fila = 0; fila < 15; fila++) {
+                for (let col = 0; col < 15; col++) {
+                    const casilla = document.createElement('div');
+                    casilla.className = 'casilla';
+                    
+                    // Determinar el tipo de casilla según la posición
+                    if (esCaraJugador(fila, col)) {
+                        configurarCasaJugador(casilla, fila, col);
+                    } else if (esCentro(fila, col)) {
+                        casilla.className += ' centro';
+                        casilla.textContent = 'META';
+                    } else if (esCamino(fila, col)) {
+                        configurarCamino(casilla, fila, col);
+                    } else {
+                        casilla.className += ' camino';
+                    }
+                    
+                    tablero.appendChild(casilla);
+                }
+            }
+        }
+
+        function esCaraJugador(fila, col) {
+            // Casa roja (esquina superior izquierda)
+            if (fila < 6 && col < 6) return 'roja';
+            // Casa amarilla (esquina superior derecha)
+            if (fila < 6 && col > 8) return 'amarilla';
+            // Casa verde (esquina inferior izquierda)
+            if (fila > 8 && col < 6) return 'verde';
+            // Casa azul (esquina inferior derecha)
+            if (fila > 8 && col > 8) return 'azul';
+            return false;
+        }
+
+        function configurarCasaJugador(casilla, fila, col) {
+            const color = esCaraJugador(fila, col);
+            casilla.className += ` casa-${color}`;
+            
+            // Agregar círculos en posiciones específicas de cada casa
+            if (esPosicionCirculo(fila, col, color)) {
+                const circulo = document.createElement('div');
+                circulo.className = 'circulo';
+                casilla.appendChild(circulo);
+            }
+        }
+
+        function esPosicionCirculo(fila, col, color) {
+            if (color === 'roja') {
+                return (fila === 2 && col === 2) || (fila === 2 && col === 4) || 
+                       (fila === 4 && col === 2) || (fila === 4 && col === 4);
+            }
+            if (color === 'amarilla') {
+                return (fila === 2 && col === 10) || (fila === 2 && col === 12) || 
+                       (fila === 4 && col === 10) || (fila === 4 && col === 12);
+            }
+            if (color === 'verde') {
+                return (fila === 10 && col === 2) || (fila === 10 && col === 4) || 
+                       (fila === 12 && col === 2) || (fila === 12 && col === 4);
+            }
+            if (color === 'azul') {
+                return (fila === 10 && col === 10) || (fila === 10 && col === 12) || 
+                       (fila === 12 && col === 10) || (fila === 12 && col === 12);
+            }
+            return false;
+        }
+
+        function esCentro(fila, col) {
+            return fila >= 6 && fila <= 8 && col >= 6 && col <= 8;
+        }
+
+        function esCamino(fila, col) {
+            // Caminos horizontales
+            if (fila === 6 || fila === 8) {
+                return col < 6 || col > 8;
+            }
+            // Caminos verticales
+            if (col === 6 || col === 8) {
+                return fila < 6 || fila > 8;
+            }
+            // Camino central horizontal
+            if (fila === 7) return true;
+            // Camino central vertical
+            if (col === 7) return true;
+            
+            return false;
+        }
+
+        function configurarCamino(casilla, fila, col) {
+            casilla.className += ' camino';
+            
+            // Configurar salidas
+            if (esSalida(fila, col)) {
+                configurarSalida(casilla, fila, col);
+            }
+            
+            // Configurar caminos de colores hacia el centro
+            if (esCaminoColor(fila, col)) {
+                configurarCaminoColor(casilla, fila, col);
+            }
+        }
+
+        function esSalida(fila, col) {
+            return (fila === 6 && col === 1) || // Salida roja
+                   (fila === 1 && col === 8) || // Salida amarilla
+                   (fila === 8 && col === 13) || // Salida verde
+                   (fila === 13 && col === 6); // Salida azul
+        }
+
+        function configurarSalida(casilla, fila, col) {
+            casilla.className += ' salida';
+            if (fila === 6 && col === 1) casilla.className += ' salida-roja';
+            if (fila === 1 && col === 8) casilla.className += ' salida-amarilla';
+            if (fila === 8 && col === 13) casilla.className += ' salida-verde';
+            if (fila === 13 && col === 6) casilla.className += ' salida-azul';
+        }
+
+        function esCaminoColor(fila, col) {
+            // Camino rojo hacia el centro
+            if (fila === 7 && col >= 1 && col <= 5) return 'rojo';
+            // Camino amarillo hacia el centro
+            if (col === 7 && fila >= 1 && fila <= 5) return 'amarillo';
+            // Camino verde hacia el centro
+            if (fila === 7 && col >= 9 && col <= 13) return 'verde';
+            // Camino azul hacia el centro
+            if (col === 7 && fila >= 9 && fila <= 13) return 'azul';
+            return false;
+        }
+
+        function configurarCaminoColor(casilla, fila, col) {
+            const color = esCaminoColor(fila, col);
+            if (color) {
+                casilla.className += ` camino-${color} llegada`;
+            }
+        }
+
+        // Inicializar el tablero cuando carga la página
+        document.addEventListener('DOMContentLoaded', crearTablero);
+    </script>
+</body>
+</html>
