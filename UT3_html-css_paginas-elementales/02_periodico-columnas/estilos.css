@@ -1,0 +1,124 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.periodico {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* --- CABECERA --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+
+.info-izquierda, .info-derecha {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+header p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.titulo-principal {
+    text-align: center;
+}
+.titulo-principal span {
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: -15px;
+}
+.titulo-principal h1 {
+    font-family: 'Uncial Antiqua', cursive;
+    font-size: 4.5em;
+    margin: 0;
+}
+
+.banner-web {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2px 0;
+    margin: 15px 0;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+/* --- CONTENIDO PRINCIPAL --- */
+main img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.seccion-principal h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.parrafo-introductorio {
+    font-size: 1.1em;
+    text-align: left;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+/* --- SISTEMA DE COLUMNAS FLOTANTES --- */
+.fila-columnas {
+    margin: 0 -10px; /* Compensa el padding de las columnas */
+}
+
+.col {
+    float: left;
+    box-sizing: border-box; /* El padding no aumenta el ancho */
+    padding: 0 10px;
+}
+
+.col-4 {
+    width: 25%;
+}
+
+.col-3 {
+    width: 33.333%;
+}
+
+.col p {
+    text-align: justify;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+/* El elemento mágico para limpiar flotantes */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.seccion-secundaria {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 2px solid black;
+}
+
+.seccion-secundaria h3 {
+    margin-top: 0;
+    font-size: 1.3em;
+}

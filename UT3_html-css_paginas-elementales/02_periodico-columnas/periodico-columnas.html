@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3: Periódico con Columnas</title>
+    <!-- Importamos la fuente similar a la gótica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="periodico">
+
+        <!-- CABECERA -->
+        <header>
+            <div class="info-izquierda">
+                <p>LUNES, 2 DE</p>
+                <p>MAYO DE 2030</p>
+            </div>
+            <div class="titulo-principal">
+                <span>ÚLTIMAS</span>
+                <h1>Noticias</h1>
+            </div>
+            <div class="info-derecha">
+                <p>Núm.</p>
+                <p>124</p>
+            </div>
+        </header>
+
+        <div class="banner-web">
+            <p>www.unsitiogenial.es</p>
+        </div>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+            <img src="gente.png" alt="Multitud de gente caminando por una calle de la ciudad en blanco y negro">
+
+            <section class="seccion-principal">
+                <h2>ÚLTIMOS ACONTECIMIENTOS EN LA CIUDAD</h2>
+                <p class="parrafo-introductorio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ullamcorper eleifend. Praesent risus leo, fringilla et ipsum.</p>
+                
+                <!-- Fila de 4 columnas -->
+                <div class="fila-columnas">
+                    <article class="col col-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ullamcorper eleifend. Praesent risus leo, fringilla et nulla at, egestas euismod orci. Suspendisse porttitor diam eu condimentum aliquam. Fusce interdum cursus nisl ut rutrum. Donec et sapien sit amet nisl pretium efficitur.</p>
+                    </article>
+                    <article class="col col-4">
+                        <p>Morbi faucibus felis mauris, sit amet finibus ipsum finibus at. Praesent maximus tincidunt fermentum. Fusce eget justo a sem auctor dapibus. Praesent interdum id ligula condimentum sagittis. Praesent risus leo, fringilla et nulla at, egestas euismod orci.</p>
+                    </article>
+                    <article class="col col-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ullamcorper eleifend. Praesent risus leo, fringilla et nulla at, egestas euismod orci. Suspendisse porttitor diam eu condimentum aliquam. Fusce interdum cursus nisl ut rutrum.</p>
+                    </article>
+                    <article class="col col-4">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ullamcorper eleifend. Praesent risus leo, fringilla et nulla at, egestas euismod orci. Suspendisse porttitor diam eu condimentum aliquam. Fusce interdum cursus nisl ut rutrum. Donec et sapien sit amet nisl pretium efficitur.</p>
+                    </article>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+
+            <section class="seccion-secundaria">
+                <!-- Fila de 3 columnas -->
+                <div class="fila-columnas">
+                     <article class="col col-3">
+                        <h3>Novedades en la economía mundial que afectan a la ciudad</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ullamcorper eleifend. Praesent risus leo, fringilla et nulla at, egestas euismod orci. Suspendisse porttitor diam eu condimentum aliquam. Fusce interdum cursus nisl ut rutrum.</p>
+                    </article>
+                    <article class="col col-3">
+                        <h3>Se acerca lluvia la próxima semana</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ullamcorper eleifend. Praesent risus leo, fringilla et nulla at, egestas euismod orci.</p>
+                    </article>
+                    <article class="col col-3">
+                        <h3>Obras en el ayuntamiento</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim nec nisl ullamcorper eleifend. Praesent risus leo, fringilla et nulla at, egestas euismod orci.</p>
+                    </article>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

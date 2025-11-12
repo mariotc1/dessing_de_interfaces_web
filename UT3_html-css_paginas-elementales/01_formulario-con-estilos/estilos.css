@@ -1,0 +1,125 @@
+/* A) DEFINIR LA FUENTE LOCAL */
+@font-face {
+    font-family: 'Playwrite MX Guides';
+    src: url('PlaywriteMX-Guides-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px; 
+}
+
+/* K) CONTENEDOR PRINCIPAL RELATIVO */
+.contenedor-principal {
+    position: relative;
+    width: 500px;
+}
+
+h1 {
+    font-family: 'Playwrite MX Guides', cursive;
+    text-align: center;
+    color: darkblue; /* B) */
+    font-size: 3em;
+    margin: 0;
+    text-decoration: underline double;
+}
+
+form {
+    background-color: lightblue; /* B) */
+    padding: 20px;
+    border: 1px solid darkblue;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+legend {
+    width: 100%;
+    background-color: darkblue;
+    color: white; /* B) */
+    padding: 8px;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.contenido-fieldset {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 15px;
+}
+
+label {
+    text-align: right;
+    padding-right: 10px;
+    color: darkblue;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.opciones-libres {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding-top: 10px;
+    color: darkblue;
+}
+.opciones-libres input {
+    margin: 0 5px 0 15px;
+}
+.opciones-libres label {
+    text-align: left;
+}
+
+.boton-submit-contenedor {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button[type="submit"] {
+    background-color: white;
+    color: darkblue;
+    border: 2px solid darkblue;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* J) INVERSIÓN DE COLORES AL PASAR EL CURSOR */
+button[type="submit"]:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+
+/* K) POSICIONAMIENTO ABSOLUTO PARA EL BOTÓN LIMPIAR */
+.boton-limpiar-contenedor {
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+}
+
+button[type="reset"] {
+    background-color: lightgray; /* B) */
+    border: 1px solid #999;
+    padding: 5px 15px;
+    cursor: pointer;
+}

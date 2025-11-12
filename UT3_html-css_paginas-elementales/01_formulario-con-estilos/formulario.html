@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio 2: Formulario de Registro</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+
+        <!--K) CONTENEDOR PADRE PARA EL POSICIONAMIENTO ABSOLUTO DEL BOTÓN LIMPIAR -->
+        <div class="contenedor-principal">
+
+            <h1>Hazte socio</h1>
+
+            <!-- J) EL FORMULARIO AHORA ENVÍA LOS DATOS CON EL MÉTODO GET -->
+            <form action="#" method="get" id="formulario-registro">
+
+                <!-- C) USO DE FIELDSET Y LEGEND -->
+                <fieldset>
+                    <legend>Registro</legend>
+                    <div class="contenido-fieldset">
+
+                        <!-- C) USO DE LABEL -->
+                        <label for="email">Correo electrónico</label>
+                        <!-- D) TIPO EMAIL, OBLIGATORIO Y CON PLACEHOLDER -->
+                        <input type="email" id="email" name="email" placeholder="correo@dominio.com" required>
+
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre">
+
+                        <label for="edad">Edad</label>
+                        <!-- D, F) TIPO NÚMERO Y CON VALOR MÍNIMO DE 18 -->
+                        <input type="number" id="edad" name="edad" value="18" min="18">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Preferencias</legend>
+                    <div class="contenido-fieldset">
+                        <label for="color">Color</label>
+                        <!-- D, H) TIPO COLOR Y CON VALOR POR DEFECTO BLANCO -->
+                        <input type="color" id="color" name="color" value="#FFFFFF">
+
+                        <label for="talla">Talla</label>
+                        <!-- G) DESPLEGABLE CON OPCIONES Y M SELECCIONADA -->
+                        <select id="talla" name="talla">
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m" selected>M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+
+                        <div class="opciones-libres">
+                            <!-- I) CHECKBOX MARCADO POR DEFECTO -->
+                            <input type="checkbox" id="condiciones" name="condiciones" checked>
+                            <label for="condiciones">Acepto las condiciones de compra</label>
+                        </div>
+                        <div class="opciones-libres">
+                            <input type="radio" id="estandar" name="envio" value="estandar">
+                            <label for="estandar">Estándar</label>
+                            <input type="radio" id="prime" name="envio" value="prime">
+                            <label for="prime">Prime</label>
+                            <input type="radio" id="urgente" name="envio" value="urgente">
+                            <label for="urgente">Urgente</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <div class="boton-submit-contenedor">
+                    <!-- J) BOTÓN DE ENVÍO -->
+                    <button type="submit">¡Me apunto!</button>
+                </div>
+
+            </form>
+
+            <!-- K) BOTÓN DE LIMPIAR FUERA DEL FORM PERO DENTRO DEL WRAPPER -->
+            <div class="boton-limpiar-contenedor">
+                <button type="reset" form="formulario-registro">Limpiar</button>
+            </div>
+
+        </div>
+
+    </body>
+</html>
