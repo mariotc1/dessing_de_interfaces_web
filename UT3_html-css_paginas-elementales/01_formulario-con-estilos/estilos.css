@@ -1,9 +1,7 @@
 /* A) DEFINIR LA FUENTE LOCAL */
 @font-face {
     font-family: 'Playwrite MX Guides';
-    src: url('PlaywriteMX-Guides-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+    src: url('PlaywriteMXGuides-Regular.ttf');
 }
 
 body {
