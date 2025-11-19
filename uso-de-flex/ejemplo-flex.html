@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejemplo de Flex</title>
+        <style>
+            #contenedor {
+                display: flex;
+                /* flex-wrap: wrap;  */
+                flex-direction: row;
+                background-color: lightblue;
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+
+            p {
+                /* flex-grow: 1; */
+                /* flex-shrink: 1; */
+                background-color: coral;
+                width: 10%;
+                border: 1px solid black;
+                flex-basis: 0;
+            }
+
+            p:nth-of-type(1) {
+                flex-grow: 1;
+            }
+
+            p:nth-of-type(2) {
+                flex-grow: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="contenedor">
+            <p>Párrafo 1</p>
+            <p>Párrafo 2</p>
+            <p>Párrafo 3</p>
+            <p>Párrafo 4</p>
+            <p>Párrafo 5</p>
+            <p>Párrafo 6</p>
+            <p>Párrafo 7</p>
+            <p>Párrafo 8</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, illum alias sit laborum quis accusamus molestias voluptate recusandae corrupti minus velit odit ratione delectus consequatur esse excepturi, eum earum quidem!</p>
+        </div>
+    </body>
+</html>
