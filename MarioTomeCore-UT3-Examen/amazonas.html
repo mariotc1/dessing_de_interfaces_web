@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Salvar al amazonas</title>
+
+        <style>
+            @font-face {
+                font-family: "Momo";
+                src: url("fonts/MomoSignature-Regular.ttf");
+            }
+
+            body {
+                margin: 0;
+                font-family: Verdana, sans-serif;
+                background-color: #ffffff;
+            }
+
+            header {
+                background-color: hsl(160, 60%, 30%);
+                color: white;
+                padding: 20px;
+                position: relative;
+            }
+
+            header h1 {
+                font-family: "Momo";
+                font-size: 40px;
+                margin: 0;
+            }
+
+            header img {
+                position: absolute;
+                top: 25px;
+                right: 25px;
+                width: 110px;
+            }
+
+            section {
+                margin: 20px;
+                background-color: hsl(160, 60%, 90%);
+                border: 3px solid hsl(160, 60%, 30%);
+                border-radius: 10px;
+                padding: 20px;
+            }
+
+            section > h2 {
+                margin-top: 0;
+                border-bottom: 3px solid hsl(160, 60%, 30%);
+                color: hsl(160, 60%, 30%);
+                padding-bottom: 10px;
+            }
+
+            #contenedor {
+                overflow: auto;
+            }
+
+            #contenedor article {
+                width: 30%;
+                float: left;
+                margin-left: 3.333%;
+                background-color: white;
+                border-radius: 10px;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+
+            #contenedor article h3 {
+                text-align: center;
+            }
+
+            #contenedor article:first-child {
+                margin-left: 0;
+            }
+
+            #contenedor img {
+                width: 80%;
+                display: block;
+                margin: 0 auto;
+            }
+
+            form {
+                display: block;
+            }
+
+            label {
+                display: block;
+                margin-top: 10px;
+                margin-bottom: 5px;
+            }
+
+            input, select {
+                width: 200px;
+                padding: 5px;
+            }
+
+            button {
+                margin-top: 15px;
+                padding: 6px 15px;
+                background-color: white;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+                padding: 10px 0;
+                background-color: hsl(160, 60%, 30%);
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <header>
+            <h1>Salvar al Amazonas</h1>
+            <img src="pictures/urgente.png" alt="Urgente">
+        </header>
+
+        <section>
+            <h2>Ecosistema</h2>
+
+            <div id="contenedor">
+
+                <article>
+                    <h3>Árbol 1</h3>
+                    <img src="pictures/arbol.jpg" alt="Imagen de un árbol.">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nemo dicta voluptas quaerat. Laborum, eaque quia ea repellat atque necessitatibus?</p>
+                </article>
+
+                <article>
+                    <h3>Árbol 2</h3>
+                    <img src="pictures/arbol.jpg" alt="Imagen de un árbol">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nemo dicta voluptas quaerat. Laborum, eaque quia ea repellat atque necessitatibus?</p>
+                </article>
+
+                <article>
+                    <h3>Árbol 3</h3>
+                    <img src="pictures/arbol.jpg" alt="Imagen de un árbol">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nemo dicta voluptas quaerat. Laborum, eaque quia ea repellat atque necessitatibus?</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section>
+            <h2>Adopta un árbol</h2>
+
+            <form method="get" action="#">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <label for="cantidad">Cantidad</label>
+                <input type="number" id="cantidad" name="cantidad" min="20" max="100" step="10">
+
+                <label for="pago">Modo de pago</label>
+                <select id="pago" name="pago">
+                    <option>Tarjeta</option>
+                    <option>Bizum</option>
+                    <option>PayPal</option>
+                </select>
+
+                <label for="rec">Recurrente</label>
+                <input type="checkbox" id="rec" name="recurrente">
+
+                <button type="submit">Adoptar</button>
+            </form>
+
+        </section>
+
+        <footer>
+            <p>Diseño de interfaces web. 2025.</p>
+        </footer>
+
+    </body>
+</html>
