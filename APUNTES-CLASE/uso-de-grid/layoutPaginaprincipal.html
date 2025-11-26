@@ -8,21 +8,37 @@
             *{
                 margin: 0;
             }
-            header{
+            
+            body {
+                display: grid;
+                grid-template-columns: repeat (4, 1fr);
+                grid-template-rows: auto;
+                grid-template-areas:
+                    "header header header header"
+                    "main main . sidebar"
+                    "footer footer footer footer";
+            }
+
+            header {
                 background-color: orange;
                 padding: 1em;
+                grid-area: header;
             }
-            main{
-                background-color: cyan;
-                padding: 1em;
+
+            main {
+            background-color: cyan;
+            padding: 1em;
+            grid-area: main;
             }
-            aside{
-                background-color: darksalmon;
-                padding: 1em;
+            aside {
+            background-color: darksalmon;
+            padding: 1em;
+            grid-area: sidebar;
             }
-            footer{
-                background-color: lightgreen;
-                padding: 1em;
+            footer {
+            background-color: lightgreen;
+            padding: 1em;
+            grid-area: footer;
             }
         </style>
     </head>
