@@ -1,0 +1,144 @@
+body { 
+    font-family: sans-serif; 
+    padding: 20px; 
+    background-color: #fff; 
+}
+
+h3 { 
+    border-bottom: 2px solid #333; 
+    padding-bottom: 10px;
+     margin-top: 40px; 
+    }
+
+/* Estilos comunes para las cajas */
+.box {
+    background-color: #444; 
+    color: #fff;
+    border-radius: 4px;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 2px solid #555;
+}
+
+/* 5a) SUPERPOSICIÓN DE ÍTEMS */
+.grid-a {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 Columnas */
+    grid-template-rows: 100px 100px 100px; /* 3 Filas fijas */
+    gap: 10px;
+    max-width: 600px;
+}
+
+/* Posicionamiento específico */
+.grid-a .item-a { 
+    grid-column: 1 / 2; 
+    grid-row: 1; 
+}
+
+/* B ocupa 2 cols */
+.grid-a .item-b { 
+    grid-column: 2 / 4; 
+    grid-row: 1; 
+}
+
+.grid-a .item-c { 
+    grid-column: 1 / 2; 
+    grid-row: 2; 
+}
+
+/* D está en el medio */
+.grid-a .item-d { 
+    grid-column: 2 / 3; 
+    grid-row: 2; 
+}
+
+/* E ocupa todo el ancho abajo */
+.grid-a .item-e { 
+    grid-column: 1 / 4; 
+    grid-row: 3; 
+} 
+
+/* ITEM F: Superpuesto */
+.grid-a .item-f {
+    grid-column: 2 / 4; 
+    grid-row: 2;        
+    background-color: rgba(49, 121, 207, 0.5); 
+    z-index: 1; 
+    color: white;
+    border-color: #2e6da4;
+}
+
+/* 5b) ANIDACIÓN DE GRID */
+.grid-b {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    max-width: 600px;
+}
+
+.grid-b .item-a { 
+    grid-column: 1 / 2; 
+}
+
+.grid-b .item-b { 
+    grid-column: 2 / 3; 
+}
+
+.grid-b .item-c { 
+    grid-column: 1 / 2; 
+    height: 150px; 
+} 
+
+/* ITEM D: Es un contenedor grid anidado */
+.grid-b .item-d-wrapper {
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Items dentro de D */
+.item-d-wrapper .sub-item-e { 
+    grid-column: 1 / 3; 
+    background-color: #ccc; 
+    color: #333; 
+}
+
+.item-d-wrapper .sub-item-f { 
+    background-color: #ccc; 
+    color: #333; 
+}
+
+.item-d-wrapper .sub-item-g {
+    background-color: #ccc; 
+    color: #333; 
+}
+
+/* 5c) AUTO-FLOW POR COLUMNAS */
+.grid-c {
+    display: grid;
+    grid-template-rows: repeat(3, 100px); /* 3 filas fijas */
+    grid-auto-flow: column; 
+    grid-gap: 10px;
+    max-width: 500px;
+}
+
+.grid-c .box {
+    background-color: #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1rem;
+}
+
+/* ALTERNAR LOS COLORES */
+.grid-c .box:nth-child(even) { 
+    background-color: #999; 
+}
+
+.grid-c .box:nth-child(odd) { 
+    background-color: #555; 
+}
