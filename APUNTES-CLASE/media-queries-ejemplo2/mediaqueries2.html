@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            ul {
+                list-style-type: none;
+                padding: 0;
+                display: flex;
+                background-color: aquamarine;
+                flex-direction: column;
+            }
+
+            li {
+                flex-grow: 1;
+                display: flex;
+                background-color: darkblue;
+                border: 1px solid darkblue;
+            }
+
+            a {
+                display: flex;
+                justify-content: center;
+                padding: 1em;
+                flex-grow: 1;
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: darkblue;
+                background-color: white;
+            }
+
+            .mostrar {
+                display: flex;
+            }
+
+            .ocultar {
+                display: none;
+            }
+
+            @media screen and (min-width: 500px) {
+                button{
+                    display: none;
+                }
+                #listado{
+                    display: flex;
+                    flex-direction: row;
+                }
+            }
+
+            @media screen and (min-width: 900px) {
+                ul {
+                    justify-content: space-evenly;
+                }
+
+                li {
+                    flex-grow: 0;
+                }
+            }
+
+            @media print {
+                nav {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <button id="btnMenu">
+                <img src="image.png" alt="Menú" style="width:32px;height:32px;">
+            </button>
+            <ul id="listado">
+                <li><a href="#">Enlace1</a></li>
+                <li><a href="#">Enlace2</a></li>
+                <li><a href="#">Enlace3</a></li>
+                <li><a href="#">Enlace4</a></li>
+                <li><a href="#">Enlace5</a></li>
+                <li><a href="#">Enlace6</a></li>
+            </ul>
+        </nav>
+        <script>
+            let btn = document.getElementById("btnMenu");
+            let ul = document.getElementById("listado");
+            let heHechoClic = false;
+
+            btn.addEventListener("click", () => {
+                if (!heHechoClic) {
+                    ul.classList.remove("ocultar");
+                    ul.classList.add("mostrar");
+                    heHechoClic = true;
+                } else {
+                    ul.classList.remove("mostrar");
+                    ul.classList.add("ocultar");
+                    heHechoClic = false;
+                }
+            });
+        </script>
+    </body>
+</html>
