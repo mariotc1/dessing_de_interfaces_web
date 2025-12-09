@@ -1,0 +1,20 @@
+🎯 DESCRIPCIÓN DEL DISEÑO OBJETIVO
+Debes crear una tienda online de tecnología responsive que se adapte a móvil, tablet y escritorio.
+DISEÑO MÓVIL (< 768px):
+
+Header con logo centrado y menú hamburguesa
+Tarjetas de productos en 1 columna ocupando todo el ancho
+Footer con información en 1 columna
+
+DISEÑO TABLET (768px - 1024px):
+
+Header con logo a la izquierda y navegación horizontal
+Grid de productos en 2 columnas
+Footer con información en 2 columnas
+
+DISEÑO ESCRITORIO (> 1024px):
+
+Header con logo, navegación y buscador en una línea (flex)
+Grid de productos en 3 columnas
+Sidebar lateral con filtros (layout con Grid del body)
+Footer con información en 3 columnas
