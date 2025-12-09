@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 20vh 60vh 20vh;
+            grid-template-areas: 
+                "cabecera cabecera"
+                "mimenu contenido"
+                "pie pie";
+        }
+        header {
+            background-color: pink;
+            grid-area: cabecera;   
+        }
+        nav {
+            background-color: purple;
+            grid-area: mimenu;
+        }
+        main {
+            background-color: crimson;
+            grid-area: contenido;
+        }
+        footer {
+            background-color: aquamarine;
+            grid-area: pie;
+        }
+        @media screen and (max-width: 900px){
+            body{
+                grid-template-columns:1fr;
+                grid-template-rows: auto auto auto auto;
+                grid-template-areas: 
+                    "cabecera"
+                    "mimenu"
+                    "contenido"
+                    "pie";
+            }
+        }
+        @media print{
+            header, nav, footer{
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cabecera</h1>
+    </header>
+    <nav>
+        <ul>
+            <li>Menú 1</li>
+            <li>Menú 2</li>
+            <li>Menú 3</li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Contenido principal</h2>
+        <p>Este es el contenido principal de la página.</p>
+    </main>
+    <footer>
+        <p>Pie de página</p>
+    </footer>
+</body>
+</html>
