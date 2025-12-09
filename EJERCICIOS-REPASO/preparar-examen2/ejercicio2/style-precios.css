@@ -1,0 +1,82 @@
+/* --- CSS BASE --- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: sans-serif; background-color: #f4f4f4; padding: 2rem; }
+
+.card { 
+    background: white; 
+    border-radius: 10px; 
+    padding: 2rem; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+    text-align: center;
+    /* PISTA: Para la trampa del botón, la tarjeta necesita ser un contenedor flexible */
+}
+
+.highlight { 
+    border: 2px solid #3498db; 
+    position: relative; 
+    /* PISTA: Queremos que esta tarjeta destaque o sea un poco más grande si usas transform */
+}
+
+.badge {
+    position: absolute; top: -10px; right: 20px;
+    background: #3498db; color: white; padding: 5px 10px; font-size: 0.8rem; border-radius: 4px;
+}
+
+h2 { margin-bottom: 1rem; color: #333; }
+.price { font-size: 3rem; font-weight: bold; color: #2c3e50; margin-bottom: 1rem; }
+ul { list-style: none; margin-bottom: 2rem; color: #666; }
+li { margin-bottom: 0.5rem; }
+
+button {
+    background: #2c3e50; color: white; border: none; padding: 10px 20px;
+    border-radius: 5px; cursor: pointer; width: 100%; font-size: 1rem;
+    transition: background 0.3s;
+}
+button:hover { background: #34495e; }
+
+/* A PARTIR DE AQUÍ TÚ MANDAS */
+
+/* 1. LAYOUT PRINCIPAL (GRID) - .pricing-container */
+/* Requisito: 3 columnas, espacio entre ellas de 2rem. */
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    align-items: stretch;
+}
+
+/* 2. TRAMPA DEL BOTÓN - .card */
+/* Requisito: Convierte .card en Flexbox columna.
+   Haz que el botón SIEMPRE se quede pegado al final de la tarjeta,
+   independientemente de cuánto texto haya arriba. */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.card button {
+    margin-top: auto;
+}
+
+/* 3. RESPONSIVE Y REORDENACIÓN - @media (max-width: 768px) */
+/* Requisito:
+   - Una sola columna.
+   - ¡IMPORTANTE!: El plan "PRO" (clase .highlight) debe aparecer PRIMERO, arriba del todo.
+   - El Básico segundo y Empresa tercero.
+*/
+@media (max-width: 768px) {
+    .pricing-container {
+        grid-template-columns: 1fr;
+    }
+    .card.highlight {
+        order: -1
+    }
+    .pricing-container .card:nth-child(1) {
+        order: 1;
+    }
+    .pricing-container .card:nth-child(3) {
+        order: 2;
+    }
+}
