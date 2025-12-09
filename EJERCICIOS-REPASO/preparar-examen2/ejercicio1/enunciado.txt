@@ -1,0 +1,19 @@
+Los Requisitos Técnicos (Puntuables):
+
+Layout Principal (Grid): La estructura general de la página debe usar CSS Grid. Debe tener:
+
+Un encabezado (header) que ocupe todo el ancho.
+
+Una zona central dividida en dos columnas: Una barra lateral (aside) a la izquierda (25% del ancho) y el contenido principal (main) a la derecha (resto del espacio).
+
+Un pie de página (footer) que ocupe todo el ancho.
+
+Menú de Navegación (Flexbox): Dentro del header, hay un logo y un menú de enlaces. Debes usar Flexbox para que el logo esté a la izquierda del todo y los enlaces a la derecha del todo (space-between).
+
+Galería de Tarjetas (Grid o Flex Avanzado): Dentro del main, hay varias "tarjetas" de estadísticas. Deben organizarse en una rejilla automática.
+
+Contenido de la Tarjeta (Flexbox): Dentro de cada tarjeta, el texto y el número deben estar centrados vertical y horizontalmente usando Flexbox.
+
+Responsive (Media Query):
+
+Cuando la pantalla sea menor de 768px (versión móvil), la barra lateral debe desaparecer (o ponerse debajo, tú decides, pero cambiemos el layout) y el contenido principal debe ocupar todo el ancho. Las tarjetas deben ponerse en una sola columna.
