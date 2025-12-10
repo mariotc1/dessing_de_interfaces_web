@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bailes de salón</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        /* Aquí van los estilos */
+        
+        /* VERSIÓN ESCRITORIO */
+        body {
+            margin: 0;
+        }
+
+        header {
+            text-align: left;
+            padding: 1em;
+        }
+
+        footer {
+            text-align: center;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            min-height: 80vh;
+        }
+
+        /* nav */
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        nav li {
+            width: 100%;
+        }
+
+        nav a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        /* secciones */
+        article {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            padding: 1em 0;
+        }
+
+        article section {
+            width: 25%;
+            padding: 1em;
+            box-sizing: border-box;
+        }
+
+        aside {
+            padding: 1em;
+        }
+
+        /* VERSIÓN MÓVIL */
+        @media screen and (max-width: 700px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            article {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            article section {
+                width: 75%;
+                margin-bottom: 1em;
+            }
+        }
+
+        /* VERSIÓN IMPRESIÓN */
+        @media print {
+            nav {
+                display: none;
+            }
+
+            main {
+                grid-template-columns: 3fr 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- No se puede modificar el HTML salvo para poner atributos id o class -->
+    <header>
+        <h1>A bailar</h1>
+    </header>
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">La academia</a></li>
+                <li><a href="#">Bailes</a></li>
+                <li><a href="#">Horarios</a></li>
+                <li><a href="#">Nosotros</a></li>
+            </ul>
+        </nav>
+        <article>
+            <section>
+                <h2>Bachata</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsa, veritatis, soluta consectetur
+                    adipisci sint consequatur ullam, eum eaque quis sapiente quaerat quidem eveniet possimus nobis ad
+                    veniam repellat! Quae molestias saepe reprehenderit laudantium aliquid tempore beatae? Animi
+                    quaerat, sint incidunt cumque provident, fugit ullam iste, alias eveniet exercitationem dolorum.</p>
+            </section>
+            <section>
+                <h2>Merengue</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsa, veritatis, soluta consectetur
+                    adipisci sint consequatur ullam, eum eaque quis sapiente quaerat quidem eveniet possimus nobis ad
+                    veniam repellat! Quae molestias saepe reprehenderit laudantium aliquid tempore beatae? Animi
+                    quaerat, sint incidunt cumque provident, fugit ullam iste, alias eveniet exercitationem dolorum.</p>
+            </section>
+            <section>
+                <h2>Tango</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit ipsa, veritatis, soluta consectetur
+                    adipisci sint consequatur ullam, eum eaque quis sapiente quaerat quidem eveniet possimus nobis ad
+                    veniam repellat! Quae molestias saepe reprehenderit laudantium aliquid tempore beatae? Animi
+                    quaerat, sint incidunt cumque provident, fugit ullam iste, alias eveniet exercitationem dolorum.</p>
+            </section>
+        </article>
+        <aside>
+            <h2>Tarifas</h2>
+            <ul>
+                <li>1 horas / semana - 10€</li>
+                <li>2 horas / semana - 18€</li>
+                <li>3 horas / semana - 24€</li>
+            </ul>
+        </aside>
+    </main>
+    <footer>
+        <small>Galileo 2025</small>
+    </footer>
+</body>
+
+</html>
