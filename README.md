@@ -1,86 +1,58 @@
-# 🎨 Diseño de Interfaces Web (DIW)
+# 🎨 Repositorio de Diseño de Interfaces Web | CFGS DAW
 
-Repositorio del módulo de Diseño de Interfaces Web del CFGS de Desarrollo de Aplicaciones Web (DAW).
+¡Hola! 👋 Bienvenido/a a mi portafolio de la asignatura de **Diseño de Interfaces Web (DIW)**, cursada en el Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web.
 
-## 📋 Descripción
+Este repositorio es una colección curada de mi trabajo, demostrando mi evolución y dominio en la creación de interfaces web modernas, responsive y estéticamente agradables utilizando **HTML5** y **CSS3**.
 
-Este repositorio contiene todo el material desarrollado durante el curso de Diseño de Interfaces Web, centrado en el diseño y maquetación web utilizando **HTML** y **CSS**.
+---
 
-## 📂 Estructura del repositorio
+## ✨ Competencias y Habilidades
 
-```
-HTML_CSS/
-├── APUNTES-CLASE/
-│   ├── ejemplos-css/
-│   ├── formularios-clase/
-│   ├── media-queries-ejemplo1/
-│   ├── media-queries-ejemplo2/
-│   ├── uso-de-css/
-│   ├── uso-de-flex/
-│   └── uso-de-grid/
-├── EJERCICIOS-REPASO/
-│   ├── práctica_inicial/
-│   ├── preparar-examen2/
-│   └── repaso_html_css/
-├── EXAMENES/
-│   ├── MarioTomeCore-UT3-Examen/
-│   └── UT4-TomeCore-Mario/
-├── UT3/
-│   ├── EJERCICIOS-FORMULARIO/
-│   └── UT3_html-css_paginas-elementales/
-└── UT4/
-    ├── Ejercicios-flexbox/
-    └── Ejercicios-grid/
-```
+A lo largo de estos proyectos, he desarrollado y aplicado un amplio abanico de técnicas fundamentales en el diseño web:
 
-## 📚 Contenido
+-   🏛️ **HTML5 Semántico**: Construcción de sitios web con una estructura lógica, accesible y optimizada para SEO.
+-   🎨 **CSS3 Avanzado**: Estilización mediante selectores complejos, pseudo-clases y pseudo-elementos.
+-   📦 **Modelo de Cajas (Box Model)**: Control preciso sobre el espaciado, bordes y dimensiones de los elementos.
+-   📐 **Layouts Modernos**:
+    -   **Flexbox**: Creación de interfaces flexibles y alineación de elementos de forma unidimensional.
+    -   **Grid**: Diseño de maquetas complejas y bidimensionales con total control sobre filas y columnas.
+-   📱 **Diseño Responsive (Mobile-First)**: Uso de **Media Queries** para adaptar la interfaz a cualquier dispositivo, desde móviles hasta ordenadores de escritorio.
+-   🖋️ **Formularios Interactivos**: Diseño y validación de formularios funcionales y amigables para el usuario.
+-   🎭 **Transiciones y Animaciones**: Incorporación de efectos sutiles para mejorar la experiencia de usuario.
+-   🔠 **Tipografías y Recursos Externos**: Integración de fuentes personalizadas e iconos para un diseño único.
 
-### Apuntes de Clase
-Material teórico y ejemplos prácticos:
-- **Ejemplos CSS**: Aplicación práctica de estilos
-- **Formularios**: Diseño y estilización de formularios web
-- **Media Queries**: Diseño responsive y adaptativo
-- **Flexbox**: Layout flexible con CSS Flexbox
-- **Grid**: Sistema de cuadrículas con CSS Grid
-- **Uso de CSS**: Buenas prácticas y técnicas de estilización
+## 📂 Estructura del Repositorio
 
-### Ejercicios de Repaso
-Material de práctica para reforzar conceptos:
-- Prácticas iniciales de HTML y CSS
-- Preparación para exámenes
-- Ejercicios de repaso completos
+El contenido está organizado de forma lógica para reflejar mi proceso de aprendizaje:
 
-### Exámenes
-Exámenes realizados durante el curso académico organizados por unidades temáticas (UT3, UT4).
+-   **`APUNTES-CLASE/`**: Contiene ejemplos prácticos y código base utilizado durante las clases para explorar nuevos conceptos.
+-   **`EJERCICIOS-REPASO/`**: Una selección de ejercicios y pequeñas prácticas para consolidar las habilidades. ¡Aquí se encuentran algunos proyectos interesantes!
+-   **`UT3/` y `UT4/`**: Actividades y proyectos correspondientes a las Unidades Temáticas del curso, centrándose en temas como formularios, Flexbox y Grid.
+-   **`EXAMENES/`**: Pruebas realizadas que demuestran la aplicación práctica de los conocimientos bajo un tiempo limitado.
 
-### UT3: Páginas Elementales
-- Ejercicios de formularios
-- Maquetación de páginas web básicas
-- Estructura HTML y CSS
+## 🚀 Proyectos Destacados
 
-### UT4: Layouts Avanzados
-- **Flexbox**: Ejercicios de distribución flexible
-- **Grid**: Ejercicios de diseño en cuadrícula
-- Layouts modernos y responsive
+Aunque cada ejercicio es un paso en mi aprendizaje, algunos proyectos representan mejor las habilidades adquiridas:
 
-## 🛠️ Tecnologías utilizadas
+1.  **Restaurante "Ganso Negro"** (`EJERCICIOS-REPASO/repaso_html_css/ganso_negro/`)
+    -   Maquetación de la página de un restaurante ficticio, aplicando estilos de texto y layout clásico.
+2.  **Galería de Toscana** (`EJERCICIOS-REPASO/repaso_html_css/tuscany/`)
+    -   Una galería de imágenes con thumbnails, demostrando el manejo de layouts para contenido visual.
+3.  **Tablero de Parchís** (`UT3/UT3_html-css_paginas-elementales/03_parchis/`)
+    -   Un desafío de maquetación para recrear un tablero de parchís usando principalmente CSS.
+4.  **Layouts con Flexbox y Grid** (`UT4/`)
+    -   Múltiples ejercicios que demuestran la potencia de Flexbox y Grid para crear desde secciones de una web hasta galerías de viajes complejas.
+
+## 🛠️ Tecnologías
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-## 🎯 Conceptos clave
-
-- Diseño responsive con Media Queries
-- Flexbox para layouts unidimensionales
-- CSS Grid para layouts bidimensionales
-- Formularios accesibles y estilizados
-- Buenas prácticas de maquetación web
-- Diseño mobile-first
-
-## 📝 Notas
-
-Este repositorio se actualiza constantemente conforme avanzo en el módulo. El contenido refleja el aprendizaje progresivo del diseño de interfaces web modernas.
-
 ---
 
-📅 **Curso académico 2025-2026** | CFGS 2 DAW
+<p align="center">
+  Gracias por visitar mi repositorio. ¡Te invito a explorar el código y ver mi progreso!
+</p>
+<p align="center">
+  <strong>Mario Tomé Core</strong> | Curso 2025-2026
+</p>
